@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ab88bd2f-6bc0-4352-af4f-d7f490975684/deploy-status)](https://app.netlify.com/sites/astro-base/deploys)
 
-![screenshot](https://github.com/hellotham/astro-base/blob/main/src/screenshot.png?raw=true)
+![screenshot](https://github.com/hellotham/astro-base/blob/main/screenshot.png?raw=true)
 
 Minimal [Astro](https://astro.build) starter for new projects. MIT licence.
 
