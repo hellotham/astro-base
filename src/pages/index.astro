@@ -13,7 +13,9 @@ const blogEntries = await getCollection('blog')
       {
         blogEntries.map((blogPostEntry) => (
           <li>
-            <a href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
+            <a href={`${import.meta.env.BASE_URL}blog/${blogPostEntry.slug}`}>
+              {blogPostEntry.data.title}
+            </a>
             <time datetime={blogPostEntry.data.pubDate.toISOString()}>
               {blogPostEntry.data.pubDate.toDateString()}
             </time>
