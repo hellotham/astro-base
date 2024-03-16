@@ -2,8 +2,9 @@
 module.exports = {
   extends: [
     'plugin:mdx/recommended',
-    'plugin:markdown/recommended',
-    'plugin:astro/recommended'
+    'plugin:markdown/recommended-legacy',
+    'plugin:astro/recommended',
+    '@unocss'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {

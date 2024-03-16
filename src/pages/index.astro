@@ -5,7 +5,7 @@ const blogEntries = await getCollection('blog')
 ---
 
 <Layout title="Welcome to Astro Base">
-  <main class="prose font-sans">
+  <main class="font-sans prose">
     <div class="i-logos-astro h-24 w-48"></div>
     <h1>Welcome to Astro Base</h1>
     <p>This is a minimal Astro starter with Typescript, UnoCSS and Iconify.</p>
@@ -16,11 +16,11 @@ const blogEntries = await getCollection('blog')
             <a href={`${import.meta.env.BASE_URL}blog/${blogPostEntry.slug}`}>
               {blogPostEntry.data.title}
             </a>
-            {blogPostEntry.data.pubDate &&
+            {blogPostEntry.data.pubDate && (
               <time datetime={blogPostEntry.data.pubDate.toISOString()}>
                 {blogPostEntry.data.pubDate.toDateString()}
               </time>
-            }
+            )}
           </li>
         ))
       }
