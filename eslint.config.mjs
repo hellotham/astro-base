@@ -1,13 +1,13 @@
 import eslintPluginAstro from 'eslint-plugin-astro'
-import jsxA11y from 'eslint-plugin-jsx-a11y'
+// import jsxA11y from 'eslint-plugin-jsx-a11y'
 import * as mdx from 'eslint-plugin-mdx'
 import markdown from '@eslint/markdown'
 import unocss from '@unocss/eslint-config/flat'
 
 export default [
   ...eslintPluginAstro.configs['flat/recommended'],
-  jsxA11y.flatConfigs.recommended,
-  // ...eslintPluginAstro.configs['flat/jsx-a11y-recommended'],
+  ...eslintPluginAstro.configs['flat/jsx-a11y-recommended'],
+  // jsxA11y.flatConfigs.recommended,
   { ...mdx.flat },
   {
     files: ['**/*.md'],
