@@ -11,14 +11,12 @@ const blogEntries = await getCollection('blog')
     <p>This is a minimal Astro starter with Typescript, UnoCSS and Iconify.</p>
     <ul>
       {
-        blogEntries.map((blogPostEntry) => (
+        blogEntries.map((post) => (
           <li>
-            <a href={`${import.meta.env.BASE_URL}blog/${blogPostEntry.slug}`}>
-              {blogPostEntry.data.title}
-            </a>
-            {blogPostEntry.data.pubDate && (
-              <time datetime={blogPostEntry.data.pubDate.toISOString()}>
-                {blogPostEntry.data.pubDate.toDateString()}
+            <a href={`${import.meta.env.BASE_URL}blog/${post.id}`}>{post.data.title}</a>
+            {post.data.pubDate && (
+              <time datetime={post.data.pubDate.toISOString()}>
+                {post.data.pubDate.toDateString()}
               </time>
             )}
           </li>
