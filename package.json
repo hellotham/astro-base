@@ -1,7 +1,7 @@
 {
   "name": "astro-base",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -14,7 +14,7 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.10",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.0.4"
+    "astro": "^5.0.5"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
@@ -22,7 +22,7 @@
     "@iconify-json/heroicons": "^1.2.1",
     "@iconify-json/logos": "^1.2.3",
     "@julr/unocss-preset-forms": "^0.1.0",
-    "@types/node": "^22.10.1",
+    "@types/node": "^22.10.2",
     "@typescript-eslint/parser": "^8.18.0",
     "@unocss/eslint-config": "^0.65.1",
     "@unocss/reset": "^0.65.1",
