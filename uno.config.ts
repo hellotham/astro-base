@@ -2,14 +2,19 @@
 import {
   defineConfig,
   presetIcons,
-  presetAttributify,
-  presetTypography,
-  presetUno
+  presetWind4,
+  // presetAttributify,
+  presetTypography
 } from 'unocss'
-import { presetForms } from '@julr/unocss-preset-forms'
+// import { presetForms } from '@julr/unocss-preset-forms'
 
 export default defineConfig({
   presets: [
+    presetWind4({
+      preflights: {
+        reset: true
+      }
+    }),
     presetIcons({
       extraProperties: {
         display: 'inline-block',
@@ -17,9 +22,8 @@ export default defineConfig({
         // ...
       }
     }),
-    presetAttributify(), // required when using attributify mode
-    presetUno(), // required
-    presetForms(),
+    // presetAttributify(), // required when using attributify mode
+    // presetForms(),
     presetTypography()
   ],
   safelist: []
