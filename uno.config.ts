@@ -1,12 +1,5 @@
 // uno.config.ts
-import {
-  defineConfig,
-  presetIcons,
-  presetWind4,
-  // presetAttributify,
-  presetTypography
-} from 'unocss'
-// import { presetForms } from '@julr/unocss-preset-forms'
+import { defineConfig, presetIcons, presetWind4, presetTypography } from 'unocss'
 
 export default defineConfig({
   presets: [
@@ -22,8 +15,6 @@ export default defineConfig({
         // ...
       }
     }),
-    // presetAttributify(), // required when using attributify mode
-    // presetForms(),
     presetTypography()
   ],
   safelist: []

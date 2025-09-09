@@ -4,8 +4,7 @@ import js from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import astro from 'eslint-plugin-astro'
 import prettier from 'eslint-plugin-prettier'
-// import * as mdx from 'eslint-plugin-mdx'
-// import markdown from "@eslint/markdown";
+import markdown from '@eslint/markdown'
 import unocss from '@unocss/eslint-config/flat'
 
 // parsers
@@ -58,21 +57,18 @@ export default defineConfig([
       '@typescript-eslint/no-explicit-any': 'off' // you may want this as it can get annoying
     }
   },
-  // {
-  //   files: ["**/*.md"],
-  //   plugins: {
-  //     markdown,
-  //   },
-  //   extends: ["markdown/recommended"],
-  //   language: "markdown/gfm",
-  // languageOptions: {
-  // 	frontmatter: "yaml",
-  // },
-  //   rules: {
-  //     // "markdown/no-html": "error",
-  //   },
-  // },
-  // { ...mdx.flat },
+  {
+    files: ['**/*.md'],
+    plugins: {
+      markdown
+    },
+    language: 'markdown/gfm',
+    processor: 'markdown/markdown',
+    rules: {
+      // Minimal rules for markdown to avoid conflicts
+      'no-html': 'off'
+    }
+  },
   unocss,
   // Ignore patterns
   {
