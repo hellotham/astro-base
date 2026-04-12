@@ -3,7 +3,7 @@ import globals from 'globals'
 import js from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import astro from 'eslint-plugin-astro'
-import prettier from 'eslint-plugin-prettier'
+import eslintConfigPrettier from 'eslint-config-prettier'
 import markdown from '@eslint/markdown'
 import unocss from '@unocss/eslint-config/flat'
 
@@ -25,17 +25,6 @@ export default defineConfig([
   // Base configs
   js.configs.recommended,
   tseslint.configs.recommended,
-
-  // Prettier config
-  {
-    plugins: {
-      prettier: prettier
-    },
-    rules: {
-      // disable warnings, since prettier should format on save
-      'prettier/prettier': 'off'
-    }
-  },
 
   // astro setup with a11y
   astro.configs.recommended,
@@ -63,15 +52,13 @@ export default defineConfig([
       markdown
     },
     language: 'markdown/gfm',
-    processor: 'markdown/markdown',
-    rules: {
-      // Minimal rules for markdown to avoid conflicts
-      'no-html': 'off'
-    }
+    processor: 'markdown/markdown'
   },
+  // Disable stylistic rules that conflict with Prettier.
+  eslintConfigPrettier,
   unocss,
   // Ignore patterns
   {
-    ignores: ['dist/**', '**/*.d.ts', '.github/']
+    ignores: ['dist/**', '.astro/**', 'node_modules/**', '**/*.d.ts', '.github/']
   }
 ])
